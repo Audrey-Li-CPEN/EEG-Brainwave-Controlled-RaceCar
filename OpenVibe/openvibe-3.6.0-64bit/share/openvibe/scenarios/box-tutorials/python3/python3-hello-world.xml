@@ -1,0 +1,111 @@
+<OpenViBE-Scenario>
+	<FormatVersion>2</FormatVersion>
+	<Creator>OpenViBE Designer</Creator>
+	<CreatorVersion>3.2.0</CreatorVersion>
+	<Settings></Settings>
+	<Inputs></Inputs>
+	<Outputs></Outputs>
+	<Boxes>
+		<Box>
+			<Identifier>(0x00003a96, 0x00003a53)</Identifier>
+			<Name>Hello World!</Name>
+			<AlgorithmClassIdentifier>(0x5dc4f669, 0xd3fd4d63)</AlgorithmClassIdentifier>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Clock frequency (Hz)</Name>
+					<DefaultValue>64</DefaultValue>
+					<Value>2</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
+					<Name>Script</Name>
+					<DefaultValue></DefaultValue>
+					<Value>${Player_ScenarioDirectory}/scripts/python-hello-world.py</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x78b47164, 0x584420aa)</Identifier>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Message</Name>
+					<DefaultValue>Hello World!</DefaultValue>
+					<Value>Hello World!</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x17ee7c08, 0x94c14893)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>304</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>112</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x2a651510, 0xb4fad0d4)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x527ad68d, 0x16d746a0)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x61d11811, 0x71e65362)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xf191c1c8, 0xa0123976)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links></Links>
+	<Comments>
+		<Comment>
+			<Identifier>(0x000047c8, 0x000050cf)</Identifier>
+			<Text>&lt;b&gt;Hello World!&lt;/b&gt;
+
+Prints a friendly message. 
+
+You can customize the message by editing
+the box configuration.
+</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>-80</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>304</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+	</Comments>
+	<Metadata>
+		<Entry>
+			<Identifier>(0x0000775c, 0x000078ff)</Identifier>
+			<Type>(0x3bcce5d2, 0x43f2d968)</Type>
+			<Data>[{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"height":507,"identifier":"(0x00003962, 0x00000a21)","name":"Default window","parentIdentifier":"(0xffffffff, 0xffffffff)","type":1,"width":798},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"identifier":"(0x0000781e, 0x00004e65)","index":0,"name":"Default tab","parentIdentifier":"(0x00003962, 0x00000a21)","type":2},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":0,"identifier":"(0x00006808, 0x00000e28)","index":0,"name":"Empty","parentIdentifier":"(0x0000781e, 0x00004e65)","type":0}]</Data>
+		</Entry>
+	</Metadata>
+</OpenViBE-Scenario>

@@ -1,0 +1,60 @@
+///-------------------------------------------------------------------------------------------------
+/// 
+/// \file CDriver@@ClassName@@.hpp
+/// \author @@AuthorName@@ (@@CompanyName@@).
+/// \version 1.0.
+/// \date @@Date@@.
+///
+///-------------------------------------------------------------------------------------------------
+
+#pragma once
+
+#include "ovasIDriver.h"
+#include "../ovasCHeader.h"
+#include <openvibe/ov_all.h>
+
+#include "../ovasCSettingsHelper.h"
+#include "../ovasCSettingsHelperOperators.h"
+
+namespace OpenViBE {
+namespace AcquisitionServer {
+/// <summary>	The CDriver@@ClassName@@ handles the configuration dialog specific to the @@DriverName@@ device. </summary>
+/// <seealso cref="CConfiguration@@ClassName@@" />
+class CDriver@@ClassName@@ : public IDriver
+{
+public:
+	explicit CDriver@@ClassName@@(IDriverContext& ctx);
+	~CDriver@@ClassName@@() override { }
+	const char* getName() override { return "@@DriverName@@"; }
+
+	bool initialize(const uint32_t nSamplePerSentBlock, IDriverCallback& callback) override;
+	bool uninitialize() override;
+
+	bool start() override;
+	bool stop() override;
+	bool loop() override;
+
+	bool isConfigurable() override { return true; }	// change to false if your device is not configurable
+	bool configure() override;
+	const IHeader* getHeader() override { return &m_header; }
+
+	bool isFlagSet(const EDriverFlag flag) const override { return flag == EDriverFlag::IsUnstable; }
+
+protected:
+	SettingsHelper m_settings;
+	IDriverCallback* m_callback = nullptr;
+
+	// Replace this generic Header with any specific header you might have written
+	CHeader m_header;
+
+	size_t m_nSamplePerSentBlock = 0;
+	float* m_sample = nullptr;
+
+private:
+	// Insert here all specific attributes, such as USB port number or device ID.
+	// Example :
+	// size_t m_connectionID = 0;
+};
+
+}  //namespace AcquisitionServer
+}  //namespace OpenViBE

@@ -1,0 +1,42 @@
+///-------------------------------------------------------------------------------------------------
+/// 
+/// \file CConfiguration@@ClassName@@.hpp
+/// \author @@AuthorName@@ (@@CompanyName@@).
+/// \version 1.0.
+/// \date @@Date@@.
+/// 
+///-------------------------------------------------------------------------------------------------
+
+#pragma once
+
+#include "../ovasCConfigurationBuilder.h"
+#include "ovasIDriver.h"
+
+#include <gtk/gtk.h>
+
+namespace OpenViBE {
+namespace AcquisitionServer {
+/// <summary>	The CConfiguration@@ClassName@@ handles the configuration dialog specific to the @@DriverName@@ device. </summary>
+/// <seealso cref="CDriver@@ClassName@@" />
+class CConfiguration@@ClassName@@ : public CConfigurationBuilder
+{
+public:
+	// you may have to add to your constructor some reference parameters
+	// for example, a connection ID:
+	//CConfiguration@@ClassName@@(IDriverContext& ctx, const char* gtkBuilderFilename, size_t& rConnectionId);
+	CConfiguration@@ClassName@@(IDriverContext& ctx, const char* gtkBuilderFilename);
+
+	bool preConfigure() override;
+	bool postConfigure() override;
+
+protected:
+	IDriverContext& m_driverCtx;
+
+private:
+	// Insert here all specific attributes, such as a connection ID.
+	// use references to directly modify the corresponding attribute of the driver
+	// Example: size_t& m_connectionID;
+};
+
+}  //namespace AcquisitionServer
+}  //namespace OpenViBE

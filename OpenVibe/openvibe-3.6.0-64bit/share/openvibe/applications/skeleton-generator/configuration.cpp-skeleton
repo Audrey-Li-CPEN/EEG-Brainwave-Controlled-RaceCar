@@ -1,0 +1,70 @@
+///-------------------------------------------------------------------------------------------------
+/// 
+/// \file CConfiguration@@ClassName@@.cpp
+/// \author @@AuthorName@@ (@@CompanyName@@).
+/// \version 1.0.
+/// \date @@Date@@.
+/// 
+///-------------------------------------------------------------------------------------------------
+
+#include "CConfiguration@@ClassName@@.hpp"
+
+namespace OpenViBE {
+namespace AcquisitionServer {
+/*_________________________________________________
+
+Insert callback to specific widget here
+Example with a button that launch a calibration of the device:
+
+//Callback connected to a dedicated gtk button:
+static void button_calibrate_pressed_cb(GtkButton* button, void* data)
+{
+	CConfiguration@@ClassName@@* config = static_cast<CConfiguration@@ClassName@@*>(data);
+	config->buttonCalibratePressedCB();
+}
+
+//Callback actually called:
+void CConfigurationGTecGUSBamp::buttonCalibratePressedCB()
+{
+	// Connect to the hardware, ask for calibration, verify the return code, etc.
+}
+_________________________________________________*/
+
+///-------------------------------------------------------------------------------------------------
+// If you added more reference attribute, initialize them here
+CConfiguration@@ClassName@@::CConfiguration@@ClassName@@(IDriverContext& ctx, const char* gtkBuilderFilename)
+	: CConfigurationBuilder(gtkBuilderFilename), m_driverCtx(ctx) { }
+
+///-------------------------------------------------------------------------------------------------
+bool CConfiguration@@ClassName@@::preConfigure()
+{
+	if (! CConfigurationBuilder::preConfigure()) { return false; }
+
+	// Connect here all callbacks
+	// Example:
+	// g_signal_connect(gtk_builder_get_object(m_builder, "button_calibrate"), "pressed", G_CALLBACK(button_calibrate_pressed_cb), this);
+
+	// Insert here the pre-configure code.
+	// For example, you may want to check if a device is currently connected
+	// and if more than one are connected. Then you can list in a dedicated combo-box 
+	// the device currently connected so the user can choose which one he wants to acquire from.
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CConfiguration@@ClassName@@::postConfigure()
+{
+	if (m_applyConfig) {
+		// If the user pressed the "apply" button, you need to save the changes made in the configuration.
+		// For example, you can save the connection ID of the selected device:
+		// m_connectionID = <value-from-gtk-widget>
+	}
+
+	if (!CConfigurationBuilder::postConfigure()) { return false; } // normal header is filled (Subject ID, Age, Gender, channels, sampling frequency), ressources are realesed 
+
+	return true;
+}
+
+}  //namespace AcquisitionServer
+}  //namespace OpenViBE

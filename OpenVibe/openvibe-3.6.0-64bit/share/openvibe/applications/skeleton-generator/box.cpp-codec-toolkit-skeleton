@@ -1,0 +1,158 @@
+///-------------------------------------------------------------------------------------------------
+/// 
+/// \file CBoxAlgorithm@@ClassName@@.cpp
+/// \brief Classes of the Box @@BoxName@@.
+/// \author @@Author@@ (@@Company@@).
+/// \version @@Version@@.
+/// \date @@Date@@.
+/// 
+///-------------------------------------------------------------------------------------------------
+
+#include "CBoxAlgorithm@@ClassName@@.hpp"
+
+namespace OpenViBE {
+namespace Plugins {
+namespace @@Namespace@@ {
+///-------------------------------------------------------------------------------------------------
+bool CBoxAlgorithm@@ClassName@@::initialize()
+{
+@@AlgorithmInitialisation@@	
+	// If you need to retrieve setting values, use the FSettingValueAutoCast function.
+	// For example :
+	// - CString setting at index 0 in the setting list :
+	// CString sSettingValue = FSettingValueAutoCast(*this->getBoxAlgorithmContext(), 0);
+	// - unsigned int64 setting at index 1 in the setting list :
+	// uint64_t uiSettingValue = FSettingValueAutoCast(*this->getBoxAlgorithmContext(), 1);
+	// - double setting at index 2 in the setting list :
+	// double doubleSettingValue = FSettingValueAutoCast(*this->getBoxAlgorithmContext(), 2);
+	// ...
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CBoxAlgorithm@@ClassName@@::uninitialize()
+{
+@@AlgorithmUninitialisation@@
+	return true;
+}
+
+@@ProcessClockCommentIn@@
+///-------------------------------------------------------------------------------------------------
+bool CBoxAlgorithm@@ClassName@@::processClock(Kernel::CMessageClock& msg)
+{
+	// some pre-processing code if needed...
+
+	// ready to process !
+	getBoxAlgorithmContext()->markAlgorithmAsReadyToProcess();
+
+	return true;
+}
+@@ProcessClockCommentOut@@
+
+@@ProcessClockCommentIn@@
+///-------------------------------------------------------------------------------------------------
+uint64_t CBoxAlgorithm@@ClassName@@::getClockFrequency()
+{
+	// Note that the time is coded on a 64 bits unsigned integer, fixed decimal point (32:32)
+	return @@ClockFrequency@@; // the box clock frequency
+}
+@@ProcessClockCommentOut@@
+
+@@ProcessInputCommentIn@@
+///-------------------------------------------------------------------------------------------------
+bool CBoxAlgorithm@@ClassName@@::processInput(const size_t /*index*/)
+{
+	// some pre-processing code if needed...
+
+	// ready to process !
+	getBoxAlgorithmContext()->markAlgorithmAsReadyToProcess();
+
+	return true;
+}
+@@ProcessInputCommentOut@@
+
+///-------------------------------------------------------------------------------------------------
+bool CBoxAlgorithm@@ClassName@@::process()
+{
+	// the static box context describes the box inputs, outputs, settings structures
+	const Kernel::IBox& staticBoxCtx = this->getStaticBoxContext();
+	// the dynamic box context describes the current state of the box inputs and outputs (i.e. the chunks)
+	Kernel::IBoxIO& boxCtx = this->getDynamicBoxContext();
+
+	// here is some useful functions:
+	// - To get input/output/setting count:
+	// staticBoxCtx.getInputCount();
+	// staticBoxCtx.getOutputCount();
+	
+	// - To get the number of chunks currently available on a particular input :
+	// boxCtx.getInputChunkCount(input_index)
+	
+	// - To send an output chunk :
+	// boxCtx.markOutputAsReadyToSend(output_index, chunk_start_time, chunk_end_time);
+	
+	
+	// A typical process iteration may look like this.
+	// This example only iterate over the first input of type Signal, and output a modified Signal.
+	// thus, the box uses 1 decoder (m_signalDecoder) and 1 encoder (m_signalEncoder)
+	/*
+	IBoxIO& boxCtx = this->getDynamicBoxContext();
+
+	//iterate over all chunk on input 0
+	for (size_t i = 0; i < boxCtx.getInputChunkCount(0); ++i)
+	{
+		// decode the chunk i
+		m_signalDecoder.decode(i);
+		// the decoder may have decoded 3 different parts : the header, a buffer or the end of stream.
+		if(m_signalDecoder.isHeaderReceived())
+		{
+			// Header received. This happens only once when pressing "play". For example with a StreamedMatrix input, you now know the dimension count, sizes, and labels of the matrix
+			// ... maybe do some process ...
+			
+			// Pass the header to the next boxes, by encoding a header on the output 0:
+			m_signalEncoder.encodeHeader(0);
+			// send the output chunk containing the header. The dates are the same as the input chunk:
+			boxCtx.markOutputAsReadyToSend(0, boxCtx.getInputChunkStartTime(0, i), boxCtx.getInputChunkEndTime(0, i));
+		}
+		if(m_signalDecoder.isBufferReceived())
+		{
+			// Buffer received. For example the signal values
+			// Access to the buffer can be done thanks to :
+			CMatrix* matrix = m_signalDecoder.getOutputMatrix(); // the StreamedMatrix of samples.
+			uint64_t frequency = m_signalDecoder.getOutputSamplingRate(); // the sampling rate of the signal
+			
+			// ... do some process on the matrix ...
+
+			// Encode the output buffer :
+			m_signalEncoder.encodeBuffer(0);
+			// and send it to the next boxes :
+			boxCtx.markOutputAsReadyToSend(0, boxCtx.getInputChunkStartTime(0, i), boxCtx.getInputChunkEndTime(0, i));
+			
+		}
+		if(m_signalDecoder.isEndReceived())
+		{
+			// End of stream received. This happens only once when pressing "stop". Just pass it to the next boxes so they receive the message :
+			m_signalEncoder.encodeEnd(0);
+			boxCtx.markOutputAsReadyToSend(0, boxCtx.getInputChunkStartTime(0, i), boxCtx.getInputChunkEndTime(0, i));
+		}
+
+		// The current input chunk has been processed, and automaticcaly discarded.
+		// you don't need to call "boxCtx.markInputAsDeprecated(0, i);"
+	}
+	*/
+
+	// check the official developer documentation webpage for more example and information :
+	
+	// Tutorials:
+	// http://openvibe.inria.fr/documentation/#Developer+Documentation
+	// Codec Toolkit page :
+	// http://openvibe.inria.fr/codec-toolkit-references/
+	
+	// Feel free to ask experienced developers on the forum (http://openvibe.inria.fr/forum) and IRC (#openvibe on irc.freenode.net).
+
+	return true;
+}
+
+}  // namespace @@Namespace@@
+}  // namespace Plugins
+}  // namespace OpenViBE

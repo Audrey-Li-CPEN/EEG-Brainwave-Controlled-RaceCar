@@ -1,0 +1,88 @@
+/**
+ * \page Doc_BoxAlgorithm_AsymmetryIndex Asymmetry Index
+
+ * \section Doc_BoxAlgorithm_AsymmetryIndexSection1 Description
+    
+    Computes the asymmetry index of a given EEG signal. Default parameters correspond to frontal alpha asymmetry.
+
+__________________________________________________________________
+
+
+ * \section Doc_BoxAlgorithm_AsymmetryIndexSection2 Inputs
+
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section2Subsection1 1. Signal
+
+ An EEG signal.
+ \li Type identifier : <em>Signal (0x5ba36127, 0x195feae1)</em>
+
+__________________________________________________________________
+
+    
+ * \section Doc_BoxAlgorithm_AsymmetryIndexSection3 Outputs
+
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section3Subsection1 1. Asymmetry Index
+
+ \li Type identifier : <em>Signal (0x5ba36127, 0x195feae1)</em>
+
+__________________________________________________________________
+
+ * \section Doc_BoxAlgorithm_AsymmetryIndexSection4 Pipeline
+
+  This metabox consists of five parts:
+  \li A channel selector box, that selects the channels to be compared in the calculation of the asymmetry.
+  \li A temporal filter box, that applies a band pass filter to the selected channels.
+  \li A time based epoching box and a simple DSP box, that compute a sliding window based power estimation of the selected channels, in the selected frequency band.
+  \li A simple DSP box that computes the asymmetry index.
+  \li A channel rename box that gives consistent names to the output channels
+
+  \image html Doc_BoxAlgorithm_AsymmetryIndex_DesignerLayout.png "Designer layout"
+  \image latex Doc_BoxAlgorithm_AsymmetryIndex_DesignerLayout.png "Designer layout" width=\textwidth
+
+ 
+__________________________________________________________________
+
+
+ * \section Doc_BoxAlgorithm_AsymmetryIndex_Section5 Settings
+
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection1 1. Left channel list and Right channel list
+  The lists of the channels the asymmetry will be based on. The asymmetry is computed between the elements (semicolon separated) of the two lists with the same indexes (both list should therefore contain the same number of semicolon separated strings). 
+  If Left Channel List = F3;P3 and Right Channel List = F4;P4, the first output channel will contain frontal asymmetry (log(F4)-log(F3)) and the second output channel will contain the parietal asymmetry (log(P4)-log(P3)).
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection1Subsubsection1 Left Channel List
+   \li Type identifier : <em>String (0x79a9edeb, 0x245d83fc)</em>
+   \li Default value : [ <em>F3</em> ]
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection1Subsubsection2 Right Channel List
+   \li Type identifier : <em>String (0x79a9edeb, 0x245d83fc)</em>
+   \li Default value : [ <em>F4</em> ]
+
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection2 2. Output channels names
+  The list of the output channels. This list should contain as many semicolon separated strings as there are channels in Left Channel List.
+  If Left Channel List = F3;P3 and Right Channel List = F4;P4, Output channels names = Frontal alpha asymmetry;Parietal alpha asymmetry would be a consistent value.
+  
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection2Subsubsection1 Output Channels Names
+   \li Type identifier : <em>String (0x79a9edeb, 0x245d83fc)</em>
+   \li Default value : [ <em>Frontal Alpha Asymmetry</em> ]
+
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection3 3. Filter Order, Low cut frequency (Hz) and High cut frequency (Hz)
+  The parameters of the temporal filter.
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection3Subsubsection1 Filter Order
+   \li Type identifier : <em>Integer (0x007deef9, 0x2f3e95c6)</em>
+   \li Default value : [ <em>4</em> ]
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection3Subsubsection2 Filter Low Cut Frequency
+   \li Type identifier : <em>Integer (0x007deef9, 0x2f3e95c6)</em>
+   \li Default value : [ <em>8</em> ]
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection3Subsubsection2 Filer High Cut Frequency
+   \li Type identifier : <em>Integer (0x007deef9, 0x2f3e95c6)</em>
+   \li Default value : [ <em>13</em> ]
+
+  
+ * \subsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection4 4. Epoching duration (s) and intervals (s)
+  The parameters of the time based epoching.
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection4Subsubsection1 Epoching duration (s)
+   \li Type identifier : <em>Float (0x512a166f, 0x5c3ef83f)</em>
+   \li Default value : [ <em>1</em> ]
+ * \subsubsection Doc_BoxAlgorithm_AsymmetryIndex_Section5Subsection4Subsubsection2 Epoching intervals (s)
+   \li Type identifier : <em>Float (0x512a166f, 0x5c3ef83f)</em>
+   \li Default value : [ <em>0.5</em> ]
+ 
+ 
+ */

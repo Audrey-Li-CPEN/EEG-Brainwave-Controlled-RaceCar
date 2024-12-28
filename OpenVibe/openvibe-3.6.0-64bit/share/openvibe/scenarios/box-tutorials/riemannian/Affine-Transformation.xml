@@ -1,0 +1,463 @@
+<OpenViBE-Scenario>
+	<FormatVersion>2</FormatVersion>
+	<Creator>OpenViBE Designer</Creator>
+	<CreatorVersion>2.2.0</CreatorVersion>
+	<Settings>
+		<Setting>
+			<Identifier>(0x0028f139, 0x9f535b8a)</Identifier>
+			<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+			<Name>Data</Name>
+			<DefaultValue>${Path_Data}/scenarios/signals/bci-motor-imagery.ov</DefaultValue>
+			<Value>${Path_Data}/scenarios/signals/bci-motor-imagery.ov</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x00659961, 0xe97d5856)</Identifier>
+			<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+			<Name>Directory</Name>
+			<DefaultValue>${Player_ScenarioDirectory}/</DefaultValue>
+			<Value>${Player_ScenarioDirectory}</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x0030836f, 0x32c229e2)</Identifier>
+			<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+			<Name>Model Filename</Name>
+			<DefaultValue>Classification-Riemann-Classic-Training-Model.xml</DefaultValue>
+			<Value>Riemann-Training-Model.xml</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x000045cd, 0xbf65ab3a)</Identifier>
+			<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+			<Name>Stimulation Class 1</Name>
+			<DefaultValue>OVTK_GDF_Left</DefaultValue>
+			<Value>OVTK_GDF_Left</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x003d07e7, 0x47d37506)</Identifier>
+			<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+			<Name>Stimulation Class 2</Name>
+			<DefaultValue>OVTK_GDF_Right</DefaultValue>
+			<Value>OVTK_GDF_Right</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x00417469, 0x63bdca5e)</Identifier>
+			<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+			<Name>Log Level</Name>
+			<DefaultValue>Information</DefaultValue>
+			<Value>Information</Value>
+		</Setting>
+	</Settings>
+	<Inputs></Inputs>
+	<Outputs></Outputs>
+	<Boxes>
+		<Box>
+			<Identifier>(0x000006d6, 0x000008e8)</Identifier>
+			<Name>Covariance Matrix Calculator</Name>
+			<AlgorithmClassIdentifier>(0x9a93af80, 0x6449c826)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Output Covariance Matrix</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x5261636b, 0x45535449)</TypeIdentifier>
+					<Name>Estimator</Name>
+					<DefaultValue>Covariance</DefaultValue>
+					<Value>Ledoit and Wolf</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Center Data</Name>
+					<DefaultValue>true</DefaultValue>
+					<Value>true</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0xa88b3667, 0x0871638c)</TypeIdentifier>
+					<Name>Log Level</Name>
+					<DefaultValue>Information</DefaultValue>
+					<Value>Information</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>416</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1008</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xa227af77, 0xcd1af363)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00001a09, 0x00003f43)</Identifier>
+			<Name>After</Name>
+			<AlgorithmClassIdentifier>(0x54f0796d, 0x3ede2cc0)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Matrix</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x3d3c7c7f, 0xef0e7129)</TypeIdentifier>
+					<Name>Color gradient</Name>
+					<DefaultValue>0:2,36,58; 50:100,100,100; 100:83,17,20</DefaultValue>
+					<Value>0:2,36,58; 50:100,100,100; 100:83,17,20</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Steps</Name>
+					<DefaultValue>100</DefaultValue>
+					<Value>100</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Symetric min/max</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Real time min/max</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>560</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1008</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x4ff49bdb, 0x9dcf6788)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>4</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00001a09, 0x00003f44)</Identifier>
+			<Name>Before</Name>
+			<AlgorithmClassIdentifier>(0x54f0796d, 0x3ede2cc0)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Matrix</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x3d3c7c7f, 0xef0e7129)</TypeIdentifier>
+					<Name>Color gradient</Name>
+					<DefaultValue>0:2,36,58; 50:100,100,100; 100:83,17,20</DefaultValue>
+					<Value>0:2,36,58; 50:100,100,100; 100:83,17,20</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Steps</Name>
+					<DefaultValue>100</DefaultValue>
+					<Value>100</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Symetric min/max</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Real time min/max</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>false</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>560</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>848</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x4ff49bdb, 0x9dcf6788)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>4</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00003b14, 0x00000f6a)</Identifier>
+			<Name>Matrix Affine Transformation</Name>
+			<AlgorithmClassIdentifier>(0x1baa7180, 0x52cb19b8)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Square Matrix</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Transformed Square Matrix</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename to load transformation</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/my-transformation-input.xml</DefaultValue>
+					<Value></Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename to save transformation</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/my-transformation-output.xml</DefaultValue>
+					<Value></Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2cdb2f0b, 0x12f231ea)</TypeIdentifier>
+					<Name>Continuous Update</Name>
+					<DefaultValue>false</DefaultValue>
+					<Value>true</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>512</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1008</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x9a24ed4b, 0x44592bc6)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x000070af, 0x00000633)</Identifier>
+			<Name>Sinus oscillator</Name>
+			<AlgorithmClassIdentifier>(0x7e33bdb8, 0x68194a4a)</AlgorithmClassIdentifier>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Generated signal</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Channel count</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>4</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Sampling frequency</Name>
+					<DefaultValue>512</DefaultValue>
+					<Value>64</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Generated epoch sample count</Name>
+					<DefaultValue>32</DefaultValue>
+					<Value>32</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>352</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1008</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x0b214ed8, 0x1f9ad83a)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links>
+		<Link>
+			<Identifier>(0x00001d34, 0x00001fa4)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000070af, 0x00000633)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x000006d6, 0x000008e8)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000054f8, 0x000011f4)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000006d6, 0x000008e8)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00003b14, 0x00000f6a)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00005fab, 0x0000528e)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000006d6, 0x000008e8)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001a09, 0x00003f44)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000070a1, 0x00000bf1)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003b14, 0x00000f6a)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001a09, 0x00003f43)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+	</Links>
+	<Comments></Comments>
+	<Metadata>
+		<Entry>
+			<Identifier>(0x05377d7e, 0x41751bb3)</Identifier>
+			<Type>(0x3bcce5d2, 0x43f2d968)</Type>
+			<Data>[{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"height":592,"identifier":"(0x00001f6c, 0x000012a7)","name":"Display","parentIdentifier":"(0xffffffff, 0xffffffff)","type":1,"width":1343},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":1,"identifier":"(0x00003bf6, 0x000002ba)","index":0,"name":"Default tab","parentIdentifier":"(0x00001f6c, 0x000012a7)","type":2},{"boxIdentifier":"(0xffffffff, 0xffffffff)","childCount":2,"dividerPosition":659,"identifier":"(0x000039d3, 0x00005c3e)","index":0,"maxDividerPosition":1323,"name":"Horizontal split","parentIdentifier":"(0x00003bf6, 0x000002ba)","type":5},{"boxIdentifier":"(0x00001a09, 0x00003f44)","childCount":0,"identifier":"(0x00007f28, 0x000070e0)","index":0,"parentIdentifier":"(0x000039d3, 0x00005c3e)","type":3},{"boxIdentifier":"(0x00001a09, 0x00003f43)","childCount":0,"identifier":"(0x0000191d, 0x00005966)","index":1,"parentIdentifier":"(0x000039d3, 0x00005c3e)","type":3}]</Data>
+		</Entry>
+	</Metadata>
+	<Attributes>
+		<Attribute>
+			<Identifier>(0x4c90d4ad, 0x7a2554ec)</Identifier>
+			<Value>320</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x790d75b8, 0x3bb90c33)</Identifier>
+			<Value>Thibaut Monseigne</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x7a3a1558, 0xf12c63c2)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x7b814cca, 0x271df6dd)</Identifier>
+			<Value>475</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x84009d7c, 0x3c4e763b)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x8c1fc55b, 0x7b433dc2)</Identifier>
+			<Value>1.0</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x9f5c4075, 0x4a0d3666)</Identifier>
+			<Value>Matrix Classification Training Example</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf36a1567, 0xd13c53da)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf6b2e3fa, 0x7bd43926)</Identifier>
+			<Value>bci-examples</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf8034a49, 0x8b3f37cc)</Identifier>
+			<Value>Inria</Value>
+		</Attribute>
+	</Attributes>
+</OpenViBE-Scenario>

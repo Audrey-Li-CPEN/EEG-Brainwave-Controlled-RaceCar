@@ -1,0 +1,19 @@
+List of artifacts (in order):
+- Head Left/Right
+- Head Up/Down
+- Eye blink
+- Eye Left/Right
+- Eye Up/Down
+- Frown
+- Move the nose
+- Swallow
+- Jaw Tighten
+- Jaw Left/Right
+- Sigh
+- Yawn
+- Cough
+- Scratch
+- Shrug shoulder
+- Sneer
+- "Roh, damn!"
+- Relocate 

@@ -1,0 +1,2245 @@
+<OpenViBE-Scenario>
+	<FormatVersion>2</FormatVersion>
+	<Creator>OpenViBE Designer</Creator>
+	<CreatorVersion>3.2.0</CreatorVersion>
+	<Settings>
+		<Setting>
+			<Identifier>(0x003874e6, 0x80815878)</Identifier>
+			<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+			<Name>Scripts Path</Name>
+			<DefaultValue>${Player_ScenarioDirectory}/scripts</DefaultValue>
+			<Value>${Player_ScenarioDirectory}/scripts</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x00528432, 0x6820e824)</Identifier>
+			<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+			<Name>Training EEG File</Name>
+			<DefaultValue>${Player_ScenarioDirectory}/signals/training.ov</DefaultValue>
+			<Value>${Player_ScenarioDirectory}/signals/training.ov</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x3f182df9, 0x22c4c9c0)</Identifier>
+			<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+			<Name>XP Name</Name>
+			<DefaultValue>XP</DefaultValue>
+			<Value>XP</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0xe14caa24, 0xdc225d56)</Identifier>
+			<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+			<Name>Subject ID</Name>
+			<DefaultValue>C1</DefaultValue>
+			<Value>C1</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x61bf58c5, 0x162b5621)</Identifier>
+			<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+			<Name>Session</Name>
+			<DefaultValue>1</DefaultValue>
+			<Value>1</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0xf52b5245, 0x1cff173c)</Identifier>
+			<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+			<Name>File Suffix</Name>
+			<DefaultValue>$var{XP Name}_$var{Subject ID}_S$var{Session}</DefaultValue>
+			<Value>$var{XP Name}_$var{Subject ID}_S$var{Session}</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x6baa1bbc, 0x80852e64)</Identifier>
+			<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+			<Name>Epoch Duration</Name>
+			<DefaultValue>4</DefaultValue>
+			<Value>4</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0xb7d4e27f, 0x5a0d2f94)</Identifier>
+			<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+			<Name>Epoch Offset</Name>
+			<DefaultValue>0.5</DefaultValue>
+			<Value>0.5</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x77d47dd5, 0x3736b2a0)</Identifier>
+			<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+			<Name>Class 1</Name>
+			<DefaultValue>OVTK_GDF_Left</DefaultValue>
+			<Value>OVTK_GDF_Left</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0xbf018158, 0x66397f0e)</Identifier>
+			<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+			<Name>Class 2</Name>
+			<DefaultValue>OVTK_GDF_Right</DefaultValue>
+			<Value>OVTK_GDF_Right</Value>
+		</Setting>
+		<Setting>
+			<Identifier>(0x22f7947b, 0xb56feede)</Identifier>
+			<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+			<Name>Filter Dimension</Name>
+			<DefaultValue>4</DefaultValue>
+			<Value>4</Value>
+		</Setting>
+	</Settings>
+	<Inputs></Inputs>
+	<Outputs></Outputs>
+	<Boxes>
+		<Box>
+			<Identifier>(0x00001832, 0x00003bd0)</Identifier>
+			<Name>Stimulation Validator</Name>
+			<AlgorithmClassIdentifier>(0x393d15e9, 0x5b6f63b9)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Output</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Stimulation to count</Name>
+					<DefaultValue>OVTK_StimulationId_Label_00</DefaultValue>
+					<Value>OVTK_StimulationId_TrainCompleted</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Number for validation</Name>
+					<DefaultValue>2</DefaultValue>
+					<Value>9</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>224</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x25910892, 0x4228395c)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x666fffff, 0x666fffff)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00002ea1, 0x00000937)</Identifier>
+			<Name>Stimulation multiplexer</Name>
+			<AlgorithmClassIdentifier>(0x07db4efa, 0x472b0938)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 1</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 2</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Multiplexed stimulations</Name>
+				</Output>
+			</Outputs>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>-272</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1168</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xe7af82cd, 0x14edb4d4)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00003f1d, 0x00004f1f)</Identifier>
+			<Name>Identity</Name>
+			<AlgorithmClassIdentifier>(0x5dffe431, 0x35215c50)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input stream 1</Name>
+				</Input>
+				<Input>
+					<Identifier>(0xd1dad070, 0x54230aee)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stream 2</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Output stream 1</Name>
+				</Output>
+				<Output>
+					<Identifier>(0xadfbffe2, 0x4fc0e0b5)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Output stream 2</Name>
+				</Output>
+			</Outputs>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x17ee7c08, 0x94c14893)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>-192</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xa8ffe2a3, 0x27038f03)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x527ad68d, 0x16d746a0)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x0000096b)</Identifier>
+			<Name>4-8</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>4</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>8</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-4_8-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>272</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x0000096c)</Identifier>
+			<Name>8-12</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>8</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>12</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-8_12-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>448</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x0000096d)</Identifier>
+			<Name>12-16</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>12</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>16</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-12_16-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>624</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x0000096e)</Identifier>
+			<Name>16-20</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>16</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>20</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-16_20-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>800</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x0000096f)</Identifier>
+			<Name>20-24</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>20</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>24</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-20_24-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x00000970)</Identifier>
+			<Name>24-28</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>24</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>28</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-24_28-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1152</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x00000971)</Identifier>
+			<Name>28-32</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>28</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>32</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-28_32-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1328</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x00000972)</Identifier>
+			<Name>32-36</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>32</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>36</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-32_36-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1504</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00004b94, 0x00000973)</Identifier>
+			<Name>36-40</Name>
+			<AlgorithmClassIdentifier>(0xfe420cb6, 0x5f2ba4c3)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<Identifier>(0xe02590b0, 0x52f82985)</Identifier>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input Signal</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x9493bcb8, 0xd8d4848f)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<Identifier>(0xd3d905f7, 0x2b88c1ac)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Train-completed Flag</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<Identifier>(0x53e968eb, 0x121c769a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Low Cut Frequency</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>36</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x8cad39ce, 0xdbca80d0)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>High Cut Frequency</Name>
+					<DefaultValue>35</DefaultValue>
+					<Value>40</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x454af4a9, 0x3e55e77a)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Duration</Name>
+					<DefaultValue>4</DefaultValue>
+					<Value>$var{Epoch Duration}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xbb21ad6d, 0xda6c49a5)</Identifier>
+					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
+					<Name>Epoch Offset</Name>
+					<DefaultValue>0.5</DefaultValue>
+					<Value>$var{Epoch Offset}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xc956238b, 0xf31b7a91)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 1</Name>
+					<DefaultValue>OVTK_GDF_Left</DefaultValue>
+					<Value>$var{Class 1}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0xe28ee4db, 0xb8abaac1)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Class 2</Name>
+					<DefaultValue>OVTK_GDF_Right</DefaultValue>
+					<Value>$var{Class 2}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x5b25c57b, 0xbcf2329e)</Identifier>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Train Trigger</Name>
+					<DefaultValue>OVTK_StimulationId_Train</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x4c8b6ef1, 0xf834b8a0)</Identifier>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Spatial Filter Configuration</Name>
+					<DefaultValue>${Player_ScenarioDirectory}/scripts/csp-spatial-filter.xml</DefaultValue>
+					<Value>$var{Scripts Path}/fbcsp-spatial-filter-36_40-$var{File Suffix}.xml</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<Identifier>(0x2ad32f66, 0xd86a0623)</Identifier>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Filter Dimension</Name>
+					<DefaultValue>6</DefaultValue>
+					<Value>$var{Filter Dimension}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x198dd621, 0xab7f153f)</Identifier>
+					<Value>(0x18bc5b7e, 0xe8b6d7da)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>0</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1680</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x05a13f95, 0xdfdc0e8f)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>9</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x000055dc, 0x0000109e)</Identifier>
+			<Name>Generic stream reader</Name>
+			<AlgorithmClassIdentifier>(0x6468099f, 0x0370095a)</AlgorithmClassIdentifier>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Output stream 1</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Output stream 2</Name>
+				</Output>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Output stream 3</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename</Name>
+					<DefaultValue></DefaultValue>
+					<Value>$var{Training EEG File}</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x17ee7c08, 0x94c14893)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>-384</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xf37b8e7a, 0x1bc33e4e)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc46b3d00, 0x3e0454e1)</Identifier>
+					<Value>(0x00000000, 0x004a76ae)</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x00005658, 0x0000687f)</Identifier>
+			<Name>Timeout</Name>
+			<AlgorithmClassIdentifier>(0x24fcd292, 0x5c8f6aa8)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x544a003e, 0x6dcba5f6)</TypeIdentifier>
+					<Name>Input Stream</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Output Stimulations</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
+					<Name>Timeout delay</Name>
+					<DefaultValue>5</DefaultValue>
+					<Value>10</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Output Stimulation</Name>
+					<DefaultValue>OVTK_StimulationId_Label_00</DefaultValue>
+					<Value>OVTK_StimulationId_Train</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>-336</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>1184</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x1eaee00e, 0xdb05d34e)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x0000631e, 0x000035e1)</Identifier>
+			<Name>Stimulation multiplexer</Name>
+			<AlgorithmClassIdentifier>(0x07db4efa, 0x472b0938)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 1</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 2</Name>
+				</Input>
+				<Input>
+					<Identifier>(0xf97fb558, 0xcb8cb2f0)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 3</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x0cb774a4, 0x34a91423)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 4</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x3a5ac3e0, 0x3e122451)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 5</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x446938d4, 0xef0d4ea9)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 6</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x0650cfc1, 0x1c7185b7)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 7</Name>
+				</Input>
+				<Input>
+					<Identifier>(0x34412e99, 0x64ea9b76)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 8</Name>
+				</Input>
+				<Input>
+					<Identifier>(0xd482e0b5, 0xef964582)</Identifier>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Input stimulations 9</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Multiplexed stimulations</Name>
+				</Output>
+			</Outputs>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>160</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xe7af82cd, 0x14edb4d4)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xfba64161, 0x65304e21)</Identifier>
+					<Value></Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x000065a7, 0x00000786)</Identifier>
+			<Name>!EOG1;EOG2;EOG3;EMGg;EMGd</Name>
+			<AlgorithmClassIdentifier>(0x361722e8, 0x311574e8)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Input signal</Name>
+				</Input>
+			</Inputs>
+			<Outputs>
+				<Output>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Output signal</Name>
+				</Output>
+			</Outputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
+					<Name>Channel List</Name>
+					<DefaultValue>:</DefaultValue>
+					<Value>EOG1;EOG2;EOG3;EMGg;EMGd</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x3bcf9e67, 0x0c23994d)</TypeIdentifier>
+					<Name>Action</Name>
+					<DefaultValue>Select</DefaultValue>
+					<Value>Reject</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0x666f25e9, 0x3e5738d6)</TypeIdentifier>
+					<Name>Channel Matching Method</Name>
+					<DefaultValue>Smart</DefaultValue>
+					<Value>Smart</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>-272</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x277826e1, 0xa30a3bd0)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x527ad68d, 0x16d746a0)</Identifier>
+					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc46b3d00, 0x3e0454e1)</Identifier>
+					<Value>(0x00000000, 0x00128288)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc73e83ec, 0xf855c5bc)</Identifier>
+					<Value>false</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
+			<Identifier>(0x0000743e, 0x000010d2)</Identifier>
+			<Name>Player Controller</Name>
+			<AlgorithmClassIdentifier>(0x5f426dce, 0x08456e13)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Stimulation name</Name>
+					<DefaultValue>OVTK_StimulationId_Label_00</DefaultValue>
+					<Value>OVTK_StimulationId_TrainCompleted</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0xcc14d8d6, 0xf27ecb73)</TypeIdentifier>
+					<Name>Action to perform</Name>
+					<DefaultValue>Pause</DefaultValue>
+					<Value>Stop</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>288</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x568d148e, 0x650792b3)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc46b3d00, 0x3e0454e1)</Identifier>
+					<Value>(0x00000000, 0x0006cd1c)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+	</Boxes>
+	<Links>
+		<Link>
+			<Identifier>(0x000000ac, 0x00005ac1)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096e)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000009c0, 0x00002e9b)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x0000096f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0x3a5ac3e0, 0x3e122451)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00000bf8, 0x000069d5)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000970)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000136c, 0x00006bc6)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096c)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000013ea, 0x00005c61)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001832, 0x00003bd0)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00001a0f, 0x00004ea2)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00002ea1, 0x00000937)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxInputIdentifier>(0xd1dad070, 0x54230aee)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00001efb, 0x00005b45)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096b)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000229a, 0x00002fda)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096b)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00002304, 0x0000724c)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096d)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000023aa, 0x00003549)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096f)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00002c0d, 0x000014fc)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000972)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00002fd9, 0x0000088a)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000973)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000327a, 0x00001665)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x00000972)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0x34412e99, 0x64ea9b76)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000033c3, 0x00000e68)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x00000970)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0x446938d4, 0xef0d4ea9)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00004263, 0x00001735)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096d)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00004360, 0x00000512)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000055dc, 0x0000109e)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00005658, 0x0000687f)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000043bd, 0x00006dbc)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00005658, 0x0000687f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00002ea1, 0x00000937)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000485d, 0x000008a7)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096f)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00004bb4, 0x00007782)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x0000096d)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0xf97fb558, 0xcb8cb2f0)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00004f04, 0x00001a9b)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096e)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000505a, 0x00007fda)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000065a7, 0x00000786)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x0000528a, 0x00006d00)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x00000971)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0x0650cfc1, 0x1c7185b7)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000054c7, 0x00005d06)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x0000096e)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0x0cb774a4, 0x34a91423)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00005c10, 0x000038fa)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000972)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00005e82, 0x00006248)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000970)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006431, 0x00007567)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x0000096c)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000064d1, 0x00000301)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000973)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006760, 0x00004cc1)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x0000096c)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006894, 0x000022df)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x00000973)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIdentifier>(0xd482e0b5, 0xef964582)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006a21, 0x00004a24)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000971)</BoxIdentifier>
+				<BoxInputIdentifier>(0xe02590b0, 0x52f82985)</BoxInputIdentifier>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006c69, 0x00003ad2)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000055dc, 0x0000109e)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x000065a7, 0x00000786)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006e7b, 0x000049d6)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000055dc, 0x0000109e)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00002ea1, 0x00000937)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000073a0, 0x00000162)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004b94, 0x0000096b)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xd3d905f7, 0x2b88c1ac)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000631e, 0x000035e1)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00007ead, 0x00006af9)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00001832, 0x00003bd0)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000743e, 0x000010d2)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00007f97, 0x000012ac)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00003f1d, 0x00004f1f)</BoxIdentifier>
+				<BoxOutputIdentifier>(0xadfbffe2, 0x4fc0e0b5)</BoxOutputIdentifier>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004b94, 0x00000971)</BoxIdentifier>
+				<BoxInputIdentifier>(0x9493bcb8, 0xd8d4848f)</BoxInputIdentifier>
+			</Target>
+		</Link>
+	</Links>
+	<Comments>
+		<Comment>
+			<Identifier>(0x0000494c, 0x00003564)</Identifier>
+			<Text>This Scenario is set for a g.tec cap with 2 amplifier g.USBamp</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>1504</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>128</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+		<Comment>
+			<Identifier>(0x00006a47, 0x0000309c)</Identifier>
+			<Text>&lt;b&gt;OVERVIEW&lt;/b&gt;
+Change Settings on Scenario Configuration tab : 
+Scripts path = folder to the scripts and config files (normally don't need to change that that if you keep the hierarchy)
+Training EEG File = link to the file for training (previous concatenate file)</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>1488</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>208</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+		<Comment>
+			<Identifier>(0x00006a47, 0x0000309d)</Identifier>
+			<Text>&lt;b&gt;PRESENTATION&lt;/b&gt;
+Les options sont modifiables dnas l'onglet Scenario Configuration : 
+Scripts path = dossier des scripts et des fichiers de configuration (normalement, il n'est pas nécessaire de changer cela si vous conservez la hiérarchie)
+Training EEG File = lien vers le fichier d'entrainement (le fichier concaténé précédemment)</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>1488</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>304</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+		<Comment>
+			<Identifier>(0x00007b10, 0x000005f7)</Identifier>
+			<Text>Add Timeout If no train stimulation comes</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>1360</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>-336</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+	</Comments>
+	<Metadata>
+		<Entry>
+			<Identifier>(0x000030a2, 0x00002768)</Identifier>
+			<Type>(0x3bcce5d2, 0x43f2d968)</Type>
+			<Data>[]</Data>
+		</Entry>
+	</Metadata>
+	<Attributes>
+		<Attribute>
+			<Identifier>(0x4c90d4ad, 0x7a2554ec)</Identifier>
+			<Value>400</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x790d75b8, 0x3bb90c33)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x7a3a1558, 0xf12c63c2)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x7b814cca, 0x271df6dd)</Identifier>
+			<Value>400</Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x84009d7c, 0x3c4e763b)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x8c1fc55b, 0x7b433dc2)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0x9f5c4075, 0x4a0d3666)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf36a1567, 0xd13c53da)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf6b2e3fa, 0x7bd43926)</Identifier>
+			<Value></Value>
+		</Attribute>
+		<Attribute>
+			<Identifier>(0xf8034a49, 0x8b3f37cc)</Identifier>
+			<Value></Value>
+		</Attribute>
+	</Attributes>
+</OpenViBE-Scenario>

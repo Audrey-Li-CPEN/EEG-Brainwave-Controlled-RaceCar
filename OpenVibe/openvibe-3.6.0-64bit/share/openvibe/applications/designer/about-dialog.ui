@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkAboutDialog" id="about">
+    <property name="border_width">5</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="program_name">OpenViBE Designer</property>
+    <property name="version">3.6.0</property>
+    <property name="comments" translatable="yes">Software technologies for the development of new research, diagnostic and therapeutic solutions leveraging real-time EEG and neurofeedback.
+Based on OpenViBE, a software from Inria.
+</property>
+    <property name="license" translatable="yes">
+	This program is free software: you can redistribute it and/or modifyit under the terms of the GNU Affero General Public License aspublished by the Free Software Foundation, either version 3 of theLicense, or (at your option) any later version.This program is distributed in the hope that it will be useful, butWITHOUT ANY WARRANTY; without even the implied warranty ofMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNUAffero General Public License for more details.You should have received a copy of the GNU Affero General PublicLicense along with this program.  If not, see http://www.gnu.org/licenses/ .
+	</property>
+    <property name="authors">Inria &amp; Mensia Technologies SA
+---
+Contributors :
+ - Guillermo Andrade-Barroso / Inria
+ - Quentin Barth&#xE9;l&#xE9;my / Mensia
+ - Laurent Bonnet / Mensia
+ - Alison Cellard / Inria
+ - J&#xE9;r&#xF4;me Chabrol / Inria
+ - Vincent Delannoy / Inria
+ - Morgane Fauvet / Mensia
+ - Charles Garraud / Inria
+ - Thierry Gaugry / Inria
+ - Esrevi Huynh / Mensia
+ - Anatole Lecuyer / Inria
+ - Jozef Leg&#xE9;ny / Mensia
+ - Jussi T. Lindgren / Inria
+ - Fabien Lotte / Inria
+ - Lo&#xEF;c Mah&#xEB; / Inria
+ - Benoit Perrin / Mensia
+ - Alexis Placet / Mensia
+ - Yann Renard / Mensia
+ - C&#xE9;dric Riou / Inria
+ - Guillaume Serri&#xE8;re / Inria
+
+Testers:
+ - Marie Prat / Mensia
+ - Agn&#xE8;s Dos Santos / Mensia
+
+ </property>
+    <property name="documenters">Inria &amp; Mensia Technologies SA
+---
+Documenters :
+ - Quentin Barth&#xE9;l&#xE9;my / Mensia
+ - Laurent Bonnet / Mensia
+ - J&#xE9;r&#xF4;me Chabrol / Inria
+ - Morgane Fauvet / Mensia
+ - Charles Garraud / Inria 
+ - Thierry Gaugry / Inria
+ - Esrevi Huynh / Mensia
+ - Jozef Leg&#xE9;ny / Mensia
+ - Jussi T. Lindgren / Inria
+ - Alexis Placet / Mensia
+ - Marie Prat / Mensia
+ - Yann Renard / Mensia
+ - C&#xE9;dric Riou / Inria
+ - Agn&#xE8;s Dos Santos / Mensia
+
+
+
+
+
+ </property>
+    <property name="logo">header_logo.png</property>
+    <property name="wrap_license">True</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox26">
+        <property name="visible">True</property>
+        <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area26">
+            <property name="visible">True</property>
+            <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

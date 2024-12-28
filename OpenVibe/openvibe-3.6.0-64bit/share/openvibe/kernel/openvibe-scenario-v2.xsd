@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Base scenario schema for OpenViBE XML scenario -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<!-- Types definitions -->
+
+	<!-- Identifier Type -->
+	<xs:simpleType name="IdentifierType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<!-- Name Type -->
+	<xs:simpleType name="NameType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<!-- ParameterType (settings value, attributes values) -->
+	<xs:simpleType name="ParameterType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<!-- Index Type -->
+	<xs:simpleType name="IndexType">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+
+	<!-- Scenario structure -->
+
+	<!-- Root node -->
+	<xs:element name="OpenViBE-Scenario">
+		<xs:complexType>
+			<xs:all>
+				<!-- Fixed format version number to implement a fallback validation mechanism -->
+				<xs:element name="FormatVersion" type="xs:string" fixed="2"/>
+				<!-- Version of the entity used to generate the scenario -->
+				<xs:element name="CreatorVersion" type="xs:string"/>
+				<!-- Name of the entity used to generate the scenario -->
+				<xs:element name="Creator" type="xs:string"/>
+				<xs:element minOccurs="0" ref="Boxes"/>
+				<xs:element minOccurs="0" ref="Links"/>
+				<xs:element minOccurs="0" ref="Comments"/>
+				<xs:element minOccurs="0" ref="Settings"/>
+				<xs:element minOccurs="0" ref="Inputs"/>
+				<xs:element minOccurs="0" ref="Outputs"/>
+				<xs:element minOccurs="0" ref="Attributes"/>
+				<xs:element minOccurs="0" ref="Metadata"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Boxes -->
+	<xs:element name="Boxes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Box"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Box">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Identifier" type="IdentifierType"/>
+				<xs:element name="Name" type="NameType"/>
+				<xs:element name="AlgorithmClassIdentifier" type="IdentifierType"/>
+				<xs:element minOccurs="0" ref="Settings"/>
+				<xs:element minOccurs="0" ref="Inputs"/>
+				<xs:element minOccurs="0" ref="Outputs"/>
+				<xs:element minOccurs="0" ref="Attributes"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Links -->
+	<xs:element name="Links">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Link"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Link">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Identifier" type="IdentifierType"/>
+				<xs:element ref="Source"/>
+				<xs:element ref="Target"/>
+				<xs:element minOccurs="0" ref="Attributes"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Source">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="BoxIdentifier" type="IdentifierType"/>
+                		<xs:choice>                
+			        	<xs:element name="BoxOutputIndex" type="IndexType"/>
+			        	<xs:element name="BoxOutputIdentifier" type="IdentifierType"/>
+                		</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Target">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BoxIdentifier" type="IdentifierType"/>
+                		<xs:choice>                
+			        	<xs:element name="BoxInputIndex" type="IndexType"/>
+			        	<xs:element name="BoxInputIdentifier" type="IdentifierType"/>
+                		</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Comments -->
+	<xs:element name="Comments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Comment"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Comment">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Identifier" type="IdentifierType"/>
+				<xs:element name="Text" type="xs:string"/>
+				<xs:element minOccurs="0" ref="Attributes"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Settings -->
+	<xs:element name="Settings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Setting"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Setting">
+		<xs:complexType>
+			<xs:all>
+				<xs:element minOccurs="0" name="Identifier" type="IdentifierType"/>
+				<xs:element name="TypeIdentifier" type="IdentifierType"/>
+				<xs:element name="Name" type="NameType"/>
+				<xs:element name="DefaultValue" type="ParameterType"/>
+				<xs:element minOccurs="0" name="Value" type="ParameterType"/>
+				<xs:element minOccurs="0" name="Modifiability" type="xs:boolean"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Inputs -->
+	<xs:element name="Inputs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Input"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Input">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="Identifier" type="IdentifierType"/>
+				<xs:element name="TypeIdentifier" type="IdentifierType"/>
+				<xs:element name="Name" type="NameType"/>
+				<xs:element minOccurs="0" name="LinkedBoxIdentifier" type="IdentifierType"/>
+				<xs:choice>				
+                	<xs:element minOccurs="0" name="LinkedBoxInputIndex" type="IndexType"/>
+					<xs:element minOccurs="0" name="LinkedBoxInputIdentifier" type="IdentifierType"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Outputs -->
+	<xs:element name="Outputs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Output"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Output">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="Identifier" type="IdentifierType"/>
+				<xs:element name="TypeIdentifier" type="IdentifierType"/>
+				<xs:element name="Name" type="NameType"/>
+				<xs:element minOccurs="0" name="LinkedBoxIdentifier" type="IdentifierType"/>
+				<xs:choice>
+					<xs:element minOccurs="0" name="LinkedBoxOutputIndex" type="IndexType"/>
+					<xs:element minOccurs="0" name="LinkedBoxOutputIdentifier" type="IdentifierType"/>
+				</xs:choice>			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Attributes -->
+	<xs:element name="Attributes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Attribute"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attribute">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="Identifier" type="IdentifierType"/>
+				<xs:element name="Value" type="ParameterType"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- Metadata -->
+	<xs:element name="Metadata">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" maxOccurs="unbounded" ref="Entry"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Entry">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Identifier" type="IdentifierType"/>
+				<xs:element name="Type" type="IdentifierType"/>
+				<xs:element name="Data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+

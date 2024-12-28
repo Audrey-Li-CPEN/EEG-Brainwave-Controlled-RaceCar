@@ -1,0 +1,150 @@
+///-------------------------------------------------------------------------------------------------
+/// 
+/// \file CDriver@@ClassName@@.cpp
+/// \author @@AuthorName@@ (@@CompanyName@@).
+/// \version 1.0.
+/// \date @@Date@@.
+/// 
+///-------------------------------------------------------------------------------------------------
+
+#include "CDriver@@ClassName@@.hpp"
+#include "CConfiguration@@ClassName@@.hpp"
+
+#include <toolkit/ovtk_all.h>
+
+namespace OpenViBE {
+namespace AcquisitionServer {
+
+///-------------------------------------------------------------------------------------------------
+CDriver@@ClassName@@::CDriver@@ClassName@@(IDriverContext& ctx)
+	: IDriver(ctx), m_settings("AcquisitionServer_Driver_@@ClassName@@", m_driverCtx.getConfigurationManager())
+{
+	m_header.setSamplingFrequency(@@Sampling@@);
+	m_header.setChannelCount(@@MaxChannel@@);
+	
+	// The following class allows saving and loading driver settings from the acquisition server .conf file
+	m_settings.add("Header", &m_header);
+	// To save your custom driver settings, register each variable to the SettingsHelper
+	//m_settings.add("SettingName", &variable);
+	m_settings.load();	
+}
+
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::initialize(const uint32_t nSamplePerSentBlock, IDriverCallback& callback)
+{
+	if (m_driverCtx.isConnected()) { return false; }
+	if (!m_header.isChannelCountSet() || !m_header.isSamplingFrequencySet()) { return false; }
+	
+	// Builds up a buffer to store
+	// acquired samples. This buffer
+	// will be sent to the acquisition
+	// server later...
+	m_sample = new float[m_header.getChannelCount() * nSamplePerSentBlock];
+	if (!m_sample) {
+		delete [] m_sample;
+		m_sample = nullptr;
+		return false;
+	}
+	
+	// ...
+	// initialize hardware and get
+	// available header information
+	// from it
+	// Using for example the connection ID provided by the configuration (m_connectionID)
+	// ...
+
+	// Saves parameters
+	m_callback = &callback;
+	m_nSamplePerSentBlock = nSamplePerSentBlock;
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::start()
+{
+	if (!m_driverCtx.isConnected()) { return false; }
+	if (m_driverCtx.isStarted()) { return false; }
+
+	// ...
+	// request hardware to start
+	// sending data
+	// ...
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::loop()
+{
+	if (!m_driverCtx.isConnected()) { return false; }
+	if (!m_driverCtx.isStarted()) { return true; }
+
+	CStimulationSet stimSet;
+
+	// ...
+	// receive samples from hardware
+	// put them the correct way in the sample array
+	// whether the buffer is full, send it to the acquisition server
+	//...
+	m_callback->setSamples(m_sample);
+	
+	// When your sample buffer is fully loaded, 
+	// it is advised to ask the acquisition server 
+	// to correct any drift in the acquisition automatically.
+	m_driverCtx.correctDriftSampleCount(m_driverCtx.getSuggestedDriftCorrectionSampleCount());
+
+	// ...
+	// receive events from hardware
+	// and put them the correct way in a CStimulationSet object
+	//...
+	m_callback->setStimulationSet(stimSet);
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::stop()
+{
+	if (!m_driverCtx.isConnected()) { return false; }
+	if (!m_driverCtx.isStarted()) { return false; }
+
+	// ...
+	// request the hardware to stop
+	// sending data
+	// ...
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::uninitialize()
+{
+	if (!m_driverCtx.isConnected()) { return false; }
+	if (m_driverCtx.isStarted()) { return false; }
+
+	// ...
+	// uninitialize hardware here
+	// ...
+
+	delete [] m_sample;
+	m_sample   = nullptr;
+	m_callback = nullptr;
+
+	return true;
+}
+
+///-------------------------------------------------------------------------------------------------
+bool CDriver@@ClassName@@::configure()
+{
+	// Change this line if you need to specify some references to your driver attribute that need configuration, e.g. the connection ID.
+	CConfiguration@@ClassName@@ config(m_driverCtx, Directories::getDataDir() + "/applications/acquisition-server/interface-@@ClassName@@.ui");
+	
+	if (!config.configure(m_header)) { return false; }
+	m_settings.save();
+	
+	return true;
+}
+
+}  // namespace AcquisitionServer
+}  // namespace OpenViBE
