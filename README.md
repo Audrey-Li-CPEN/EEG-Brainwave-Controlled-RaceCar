@@ -28,6 +28,8 @@ Utilize the 14-channel EPOC+ Model 1.1 EEG device to collect brainwave data and 
   - [Step 8: Success](#step-8-success)
   - [Step 9: Really](#step-9-really)
 
+[![Watch the video](https://youtu.be/ZJa19iEciH4)]
+Successfull EEG device realtime data visualization connection - Demo 0.0
 
 ## EEG Device Preparation (EPOC+)
 Before starting the project, ensure the EPOC+ device is properly configured. Follow these detailed steps to prepare your device for reliable brainwave data collection.
