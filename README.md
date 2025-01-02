@@ -5,7 +5,10 @@ Utilize the 14-channel EPOC+ Model 1.1 EEG device to collect brainwave data and 
 TODO:
 - Will add manuals how we convert the online EPOC+ Motor Imagery .ov dataset to our trainable csv dataset
 - Will add the stimulation design for our specfic data recording
-
+- Will add how we convert the csv to trainable csv files
+- Will add how we process the raw data
+- Will add how I trained the deepCNN1d
+  
 # 目录
 
 - [EEG-Brainwave-Controlled-RaceCar](#eeg-brainwave-controlled-racecar)
