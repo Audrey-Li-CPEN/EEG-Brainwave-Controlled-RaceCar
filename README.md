@@ -13,7 +13,7 @@ TODO:
 - Will add how we process the raw data
 - Will add how I trained the deepCNN1d
   
-# Catalog
+# Cotent List
 
 - [EEG-Brainwave-Controlled-RaceCar](#eeg-brainwave-controlled-racecar)
 - [EEG Device Preparation (EPOC+)](#eeg-device-preparation-epoc)
