@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/a83ca752-6628-483c-a997-53208fd21c4c
 - Train: The folder contains initial model and real time simulation with whole data processing and high accuracy for stationary EEG classifications(98%) but poor real-time accuracy (26%).
 - Train_realtime_experiments: Enhanced model with trials of experiments for different parameters (batch, windows, learning rate, weight decay, etc.) and its real time simulation tests. The model receives lowever offline training accuracy (85-86%) but improved online real-time accuracy to ~50% (compared to typical 28% for multiclass online classifications).
 - final_deployment: The folder contains the final model used and the server client framework for the physical control over the F1TENTH racecar.
-- stimulation.py: the real-time recording script for our self-recorded data with real-time labeling and timestamping functions. 
+- stimulation.py: the real-time recording script for our self-recorded data with real-time visual stimulation, labeling, and timestamping functions. 
   
 # Cotent List
 
