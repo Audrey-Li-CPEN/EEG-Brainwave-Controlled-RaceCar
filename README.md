@@ -1,6 +1,10 @@
 # EEG-Brainwave-Controlled-RaceCar
 Utilize the 14-channel EPOC+ Model 1.1 EEG device to collect brainwave data and classify motor imagery data to control an F1TENTH Race Car. This project emphasizes precise experimentation, iterative trials, thorough testing, and strict safety measures.
 
+
+Uploading Demo Final.mp4…
+
+
 ---
 TODO:
 - Will add manuals how we convert the online EPOC+ Motor Imagery .ov dataset to our trainable csv dataset
@@ -9,7 +13,7 @@ TODO:
 - Will add how we process the raw data
 - Will add how I trained the deepCNN1d
   
-# 目录
+# Catalog
 
 - [EEG-Brainwave-Controlled-RaceCar](#eeg-brainwave-controlled-racecar)
 - [EEG Device Preparation (EPOC+)](#eeg-device-preparation-epoc)
