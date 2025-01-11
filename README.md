@@ -2,16 +2,11 @@
 Utilize the 14-channel EPOC+ Model 1.1 EEG device to collect brainwave data and classify motor imagery data to control an F1TENTH Race Car. This project emphasizes precise experimentation, iterative trials, thorough testing, and strict safety measures.
 
 
-Uploading Demo Final.mp4…
+https://github.com/user-attachments/assets/a83ca752-6628-483c-a997-53208fd21c4c
 
 
----
-TODO:
-- Will add manuals how we convert the online EPOC+ Motor Imagery .ov dataset to our trainable csv dataset
-- Will add the stimulation design for our specfic data recording
-- Will add how we convert the csv to trainable csv files
-- Will add how we process the raw data
-- Will add how I trained the deepCNN1d
+# Repo Structure
+- Dataset
   
 # Cotent List
 
